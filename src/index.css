@@ -10,7 +10,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-glow {
+    @apply relative bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-600/40 hover:shadow-xl hover:-translate-y-0.5;
   }
 
   .input-field {
@@ -20,4 +24,96 @@
   .card {
     @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
   }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glow-dot {
+    @apply absolute rounded-full blur-3xl opacity-20 pointer-events-none;
+  }
 }
+
+/* gradient-text uses plain CSS to avoid @apply issues with custom color shades */
+.gradient-text {
+  background: linear-gradient(to right, #60a5fa, #93c5fd, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#030712, #030712) padding-box,
+    linear-gradient(135deg, #2563eb, #7b9cff, #2563eb) border-box;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+
+/* ── Hero animations — defined in plain CSS so forwards fill-mode works reliably ── */
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-fade-up-delay {
+  animation: fadeUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay2 {
+  animation: fadeUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Mesh grid background */
+.mesh-bg {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Scroll-triggered stagger for feature cards ── */
+.feature-card {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.feature-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for each card index */
+.feature-card:nth-child(1) { transition-delay: 0ms;   }
+.feature-card:nth-child(2) { transition-delay: 80ms;  }
+.feature-card:nth-child(3) { transition-delay: 160ms; }
+.feature-card:nth-child(4) { transition-delay: 240ms; }
+.feature-card:nth-child(5) { transition-delay: 320ms; }
+.feature-card:nth-child(6) { transition-delay: 400ms; }

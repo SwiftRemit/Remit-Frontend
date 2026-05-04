@@ -27,10 +27,26 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-950 flex flex-col px-4">
+
+      {/* Top nav */}
+      <nav className="flex items-center justify-between py-5 max-w-md mx-auto w-full">
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div className="w-7 h-7 bg-primary-600 rounded-lg flex items-center justify-center text-sm font-bold">⚡</div>
+          <span className="font-bold text-white text-base">SwiftRemit</span>
+        </Link>
+        <Link to="/" className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Home
+        </Link>
+      </nav>
+
+      {/* Form centred in remaining space */}
+      <div className="flex-1 flex items-center justify-center">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <span className="text-4xl">⚡</span>
           <h1 className="text-2xl font-bold text-white mt-2">Welcome back</h1>
           <p className="text-gray-400 mt-1">Sign in to your SwiftRemit account</p>
         </div>
@@ -69,6 +85,7 @@ export default function LoginPage() {
             </Link>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

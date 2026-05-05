@@ -49,8 +49,6 @@ SwiftRemit provides:
 ---
 
 ## 🏗️ System Architecture
-
-```mermaid
 flowchart LR
     A[User] --> B[Frontend (React)]
     B --> C[Backend API (Node.js)]

@@ -148,7 +148,7 @@ SwiftRemit will:
 ## 📎 Getting Started
 
 ```bash
-git clone https://github.com/your-username/swiftremit
+git clone https://github.com/Dev-Ben-Theo/swiftremit
 cd swiftremit
 npm install
 npm run dev

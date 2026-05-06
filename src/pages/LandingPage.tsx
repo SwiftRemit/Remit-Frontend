@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import TypewriterText from "@/components/TypewriterText";
+import MoneyTransferAnimation from "@/components/MoneyTransferAnimation";
 
 const features = [
   { icon: "⚡", title: "Instant Settlement", desc: "Transactions confirm in 3–5 seconds on the Stellar network — not 2–5 business days." },
@@ -209,7 +210,9 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <div className="hidden md:block" />
+              <div className="hidden md:flex items-start justify-center pt-4">
+                <MoneyTransferAnimation />
+              </div>
             </div>
           </section>
         </div>

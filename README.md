@@ -7,6 +7,26 @@
 [![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20TypeScript-61dafb)](https://react.dev)
 [![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-green)](https://expressjs.com)
 
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange)
+![Stellar](https://img.shields.io/badge/powered_by-Stellar-blue)
+
+## Impact Vision
+
+The World Bank estimates that Sub-Saharan Africa remains one of the most expensive regions for remittances.
+
+SwiftRemit aims to reduce these barriers by providing:
+
+- Near-instant settlement
+- Significantly lower transaction costs
+- Financial accessibility for underserved populations
+- Open and transparent payment infrastructure
+- Interoperability across borders
+
+Our long-term goal is to become a foundational payment layer connecting individuals, businesses, and institutions across Africa and beyond.
+
 ---
 
 ## 📌 Overview
@@ -16,6 +36,68 @@ SwiftRemit is a full-stack blockchain-powered cross-border payment platform buil
 Built on the **Stellar network**, SwiftRemit enables near-instant, low-cost payments using **XLM and USDC stablecoins** — settling in 3–5 seconds for fractions of a cent per transaction.
 
 Transactions are signed by the user's **Freighter browser wallet** — secret keys never leave the user's device or touch the server.
+
+## Executive Summary
+
+SwiftRemit is a blockchain-powered remittance platform that enables individuals and businesses across Africa to send and receive money globally in seconds using Stellar-powered digital assets.
+
+By leveraging Stellar's low-cost payment rails and Soroban smart contracts, SwiftRemit reduces settlement times from days to seconds while dramatically lowering transaction costs. Users retain full custody of their assets through Freighter wallet integration, ensuring security, transparency, and trust.
+
+Our mission is to make cross-border payments accessible, affordable, and borderless for everyone.
+
+## Why Stellar?
+
+Cross-border payments require an infrastructure that is:
+
+- Fast
+- Affordable
+- Globally accessible
+- Secure
+- Developer friendly
+
+Stellar provides all of these capabilities natively.
+
+### Stellar Advantages
+
+| Feature | Benefit to SwiftRemit |
+|----------|----------------------|
+| 3–5 second settlement | Instant international transfers |
+| Ultra-low fees | Affordable remittances |
+| Native asset support | USDC and tokenized currencies |
+| Global interoperability | Cross-border payment corridors |
+| Soroban smart contracts | Programmable payment workflows |
+| Sustainable network | Environmentally friendly operations |
+
+These characteristics make Stellar the ideal foundation for building next-generation financial infrastructure in Africa.
+
+## Real-World Use Cases
+
+### Family Remittances
+
+A worker in Europe can send funds to family members in Africa within seconds at a fraction of traditional remittance costs.
+
+### Freelancer Payments
+
+African freelancers can receive payments from global clients without relying on expensive intermediaries.
+
+### SME Cross-Border Commerce
+
+Businesses can settle international invoices instantly using Stellar assets.
+
+### NGO & Aid Distribution
+
+Organizations can distribute funds transparently while maintaining full auditability on-chain.
+
+## Performance Metrics
+
+| Metric | Result |
+|----------|---------|
+| Settlement Time | 3–5 seconds |
+| Average Network Fee | ~$0.00001 |
+| Transaction Security | Non-custodial |
+| Wallet Support | Freighter |
+| Smart Contract Platform | Soroban |
+| Blockchain Network | Stellar |
 
 ---
 
@@ -321,7 +403,20 @@ npm run check-balance
 ---
 
 ## 🔐 Security
+## Security-First Architecture
 
+SwiftRemit follows a non-custodial architecture designed around the principle that users should maintain full control of their assets and private keys.
+
+### Security Principles
+
+- Private keys never leave user-controlled wallets
+- Backend servers never store wallet secrets
+- Freighter performs all transaction signing locally
+- JWT-protected APIs
+- Rate limiting and abuse prevention
+- Input validation on all mutation endpoints
+- Secure password hashing using bcrypt
+- Smart contract authorization enforced through Soroban's require_auth()
 | Layer | Measure |
 |---|---|
 | **Key management** | Secret keys never leave the browser — Freighter signs locally |
@@ -397,6 +492,29 @@ npm run check-balance
 ---
 
 ## 🤝 Contributing
+## Contributor Onboarding
+
+We actively welcome contributors.
+
+### Getting Started
+
+1. Fork the repository
+2. Clone locally
+3. Install dependencies
+4. Configure environment variables
+5. Run development servers
+6. Review open issues
+7. Submit pull requests
+
+### Good First Issues
+
+Look for issues tagged:
+
+- good-first-issue
+- documentation
+- frontend
+- backend
+- soroban
 
 We welcome contributors in:
 - Blockchain / Stellar / Soroban development

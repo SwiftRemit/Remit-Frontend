@@ -414,7 +414,11 @@ To power a financially inclusive Africa where anyone can send and receive money 
 
 ## 🏁 Conclusion
 
-SwiftRemit combines Stellar's speed, Soroban's programmability, and Freighter's secure key management to redefine cross-border payments in Africa — making them faster, cheaper, and safer for everyone.
+## Conclusion
+
+SwiftRemit combines Stellar's high-performance payment infrastructure, Soroban smart contracts, and non-custodial wallet security to create a modern remittance platform designed for Africa's growing digital economy.
+
+By reducing costs, eliminating unnecessary intermediaries, and enabling near-instant settlement, SwiftRemit demonstrates how blockchain technology can solve real-world financial challenges at scale.
 
 ---
 
